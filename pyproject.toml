@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aevum-workflows"
+version = "2.0.0"
+description = "336 production-ready ComfyUI workflows across 8 categories"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Apache-2.0"}
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+aevum-workflows = "aevum_workflows.cli:main"
+
+[project.urls]
+Homepage = "https://aevum.ai?utm_source=workflows"
+Repository = "https://github.com/aevum-ai/aevum-workflows"
+
+[tool.setuptools.packages.find]
+include = ["aevum_workflows*"]
